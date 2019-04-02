@@ -1,0 +1,47 @@
+{
+  "name": "prettier-php-playground",
+  "version": "1.0.0",
+  "description": "A playground for the experimental Prettier PHP plugin",
+  "author": "Florian Reuschel <florian@loilo.de>",
+  "private": true,
+  "scripts": {
+    "dev": "HOST=0.0.0.0 nuxt",
+    "generate": "nuxt generate",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^2.6.0",
+    "@prettier/plugin-php": "^0.10.1",
+    "composite-symbol": "^0.1.3",
+    "cross-env": "^5.2.0",
+    "dedent": "^0.7.0",
+    "github-buttons": "^2.2.8",
+    "hammerjs": "^2.0.8",
+    "lodash": "^4.17.11",
+    "lz-string": "^1.4.4",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.4.0",
+    "prettier": "1.16.4",
+    "resize-observer-polyfill": "^1.5.1",
+    "sass-loader": "^7.1.0",
+    "vue-async-computed": "^3.5.2",
+    "vue-clipboard2": "^0.3.0",
+    "vue-codemirror": "^4.0.6",
+    "workerize-loader": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-standard": ">=12.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": ">=2.14.0",
+    "eslint-plugin-jest": ">=21.24.1",
+    "eslint-plugin-node": ">=7.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "nodemon": "^1.18.9"
+  }
+}
