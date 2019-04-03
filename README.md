@@ -16,8 +16,10 @@ The main purposes of this playground are:
 The PHP playground comes with the interface you know and love — it's almost a 1:1 clone of Prettier's own playground, but with some improvements:
 
 * **Offline First**
+
   Thanks to [Service Workers](https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers), the playground just works™ when you're not connected to the internet.
 * **Mobile Support**
+
   Working with code is not all too common on mobile devices, but if you need it, we're here for you — the PHP playground features a functional mobile layout.
 
 ## Contributing
