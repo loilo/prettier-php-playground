@@ -20,7 +20,7 @@
     "lodash": "^4.17.11",
     "lz-string": "^1.4.4",
     "node-sass": "^4.11.0",
-    "nuxt": "^2.6.2",
+    "nuxt": "^2.6.3",
     "prettier": "1.17.0",
     "resize-observer-polyfill": "^1.5.1",
     "sass-loader": "^7.1.0",
