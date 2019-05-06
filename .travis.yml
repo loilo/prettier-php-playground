@@ -3,6 +3,7 @@ node_js:
   - '10'
 
 cache:
+  yarn: true
   directories:
     - 'node_modules'
 
@@ -11,8 +12,8 @@ branches:
     - master
 
 install:
-  - npm install
-  - npm run generate:gh-pages
+  - yarn
+  - yarn run generate:gh-pages
 
 script:
   - echo "Skipping tests"
