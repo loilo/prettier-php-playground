@@ -42,10 +42,10 @@
     <details class="sidebar__group" open>
       <summary class="sidebar__headline">PHP</summary>
       <label class="sidebar__option" title="When to insert trailing commas">
-        --trailing-comma
+        --trailing-comma-php
         <select
-          :value="prettierOptions.trailingComma"
-          @change="setPrettierOption(['trailingComma', $event.currentTarget.value])"
+          :value="prettierOptions.trailingCommaPHP"
+          @change="setPrettierOption(['trailingCommaPHP', $event.currentTarget.value])"
         >
           <option value="all">all</option>
           <option value="php7.2">PHP 7.2</option>

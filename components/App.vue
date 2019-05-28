@@ -284,20 +284,20 @@ export default {
 
   @media (min-width: 768px) {
     grid-template-rows: 52px 1fr 36px;
-    grid-template-columns: 225px 1fr 1fr;
+    grid-template-columns: 240px 1fr 1fr;
     grid-template-areas:
       'header header header'
       'sidebar input output'
       'footer footer footer';
 
-    grid-template-columns: 225px 1fr 1fr;
+    grid-template-columns: 240px 1fr 1fr;
     grid-template-areas:
       'header header header'
       'sidebar input output'
       'footer footer footer';
 
     &--with-ast {
-      grid-template-columns: 225px 1fr 1fr 1fr;
+      grid-template-columns: 240px 1fr 1fr 1fr;
       grid-template-areas:
         'header header header header'
         'sidebar input ast output'
