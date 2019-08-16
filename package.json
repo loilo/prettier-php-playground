@@ -27,7 +27,7 @@
     "vue-async-computed": "^3.7.0",
     "vue-clipboard2": "^0.3.0",
     "vue-codemirror": "^4.0.6",
-    "workerize-loader": "^1.0.4"
+    "workerize-loader": "^1.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
