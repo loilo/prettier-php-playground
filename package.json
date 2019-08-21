@@ -23,7 +23,7 @@
     "nuxt": "^2.8.1",
     "prettier": "1.18.2",
     "resize-observer-polyfill": "^1.5.1",
-    "sass-loader": "^7.2.0",
+    "sass-loader": "^7.3.1",
     "vue-async-computed": "^3.7.0",
     "vue-clipboard2": "^0.3.0",
     "vue-codemirror": "^4.0.6",
