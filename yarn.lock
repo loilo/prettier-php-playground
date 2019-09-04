@@ -2754,10 +2754,10 @@ component-emitter@^1.2.1:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
   integrity sha1-E3kY1teCg/ffemt8WmPhQOaUJeY=
 
-composite-symbol@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/composite-symbol/-/composite-symbol-0.1.5.tgz#21d5a98c346b1853bde9a87f46e38bdf5b9a05a1"
-  integrity sha512-S2hlYqvJx9vyYap+TJeaPm0s1vq04677LCizk1Ci0R6Sv8sWfzHvp87iTwQJ4GOXRuvtbL3R/VVVDi6OZFjO7A==
+composite-symbol@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/composite-symbol/-/composite-symbol-1.0.0.tgz#edb7cbb9d8e4a22b3737cd5eed6ebc6f75f3a1af"
+  integrity sha512-llNL/fmsRolscaioTptzqD9W2kc2Hs1WiAZ9fHgG/5K4z/DGAtGUZqZ3QfmLyGmEuxEcqXtfKuOxhbpecXVkww==
 
 compressible@~2.0.16:
   version "2.0.16"
