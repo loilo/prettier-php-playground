@@ -12,7 +12,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
     "@prettier/plugin-php": "^0.11.2",
-    "composite-symbol": "^1.0.0",
+    "composite-symbol": "^1.0.1",
     "cross-env": "^5.2.1",
     "dedent": "^0.7.0",
     "github-buttons": "^2.2.10",
