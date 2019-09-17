@@ -123,6 +123,49 @@ module.exports = {
    */
   modules: ['@nuxtjs/pwa'],
 
+  manifest: {
+    name: 'Prettier PHP Playground',
+    short_name: 'Prettier PHP',
+    description: 'A playground for the Prettier PHP plugin',
+    lang: 'en',
+    start_url: NON_EMPTY_ROOT,
+    display: 'fullscreen',
+    background_color: '#1a2b34',
+    theme_color: '#1a2b34',
+    icons: [
+      {
+        src: 'https://prettier.io/icon.png',
+        sizes: '48x48',
+        type: 'image/png'
+      },
+      {
+        src: 'https://prettier.io/icon.png',
+        sizes: '72x72',
+        type: 'image/png'
+      },
+      {
+        src: 'https://prettier.io/icon.png',
+        sizes: '96x96',
+        type: 'image/png'
+      },
+      {
+        src: 'https://prettier.io/icon.png',
+        sizes: '144x144',
+        type: 'image/png'
+      },
+      {
+        src: 'https://prettier.io/icon.png',
+        sizes: '168x168',
+        type: 'image/png'
+      },
+      {
+        src: 'https://prettier.io/icon.png',
+        sizes: '192x192',
+        type: 'image/png'
+      }
+    ]
+  },
+
   build: {
     extend(config) {
       config.output.globalObject = 'self'
