@@ -128,7 +128,6 @@ module.exports = {
     short_name: 'Prettier PHP',
     description: 'A playground for the Prettier PHP plugin',
     lang: 'en',
-    start_url: NON_EMPTY_ROOT,
     display: 'fullscreen',
     background_color: '#1a2b34',
     theme_color: '#1a2b34',
