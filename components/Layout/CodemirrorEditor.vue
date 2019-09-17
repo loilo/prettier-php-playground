@@ -1,8 +1,8 @@
 <template>
   <section>
-    <no-ssr placeholder="Codemirror Loading...">
-      <codemirror v-bind="$attrs" v-on="$listeners"/>
-    </no-ssr>
+    <client-only placeholder="Codemirror Loading...">
+      <codemirror v-bind="$attrs" v-on="$listeners" />
+    </client-only>
   </section>
 </template>
 
