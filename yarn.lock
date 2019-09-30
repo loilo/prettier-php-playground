@@ -4272,10 +4272,10 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-github-buttons@^2.2.10:
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.2.10.tgz#7ddf66679b4c23e4c4558fedbba6d8aa48241cd6"
-  integrity sha512-hkcYkzru6yq33FZleeiryFxR62uDdqHJMQeNiUeh03uHpCSGGdpq3V9RKH7+Xa0pjyce+ftNTx4C3CgO/Auw2A==
+github-buttons@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.3.1.tgz#61df4d9b6c9b27fe76b29aa4b96faa9e704c96f8"
+  integrity sha512-IUcDmvkJzleWki9I1P9fng+omOGnDx7M/jv/czhngQ2QRaz9YZkKRN3h4U1IHU+yrpY5FCwTqjdBQj0PVouDqw==
 
 glob-parent@^3.1.0:
   version "3.1.0"
