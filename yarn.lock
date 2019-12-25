@@ -9540,10 +9540,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-vue-async-computed@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/vue-async-computed/-/vue-async-computed-3.8.0.tgz#6865b7de71ba83c01ab6885fbb19929843d6d55e"
-  integrity sha512-o6LYiRjLEgChf635bvQEylbs9FtkDdagD8FTjJCKRG0d4wt8mO5/EGNC8dnHyYdLIT0t2waOetcISpXwvoaaXQ==
+vue-async-computed@^3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/vue-async-computed/-/vue-async-computed-3.8.1.tgz#24b92c058039ff21cf843f702286db4af7efa22f"
+  integrity sha512-B9bmdbuWwXIfcM+LE0k1bIpXhDUrqF2OmfQLOUPK0YTZxTGfG3gU97RdXwiQUc+YPhf4qdVI7q/YT6bgL6DpIw==
 
 vue-client-only@^2.0.0:
   version "2.0.0"
