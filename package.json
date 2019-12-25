@@ -24,7 +24,7 @@
     "prettier": "1.19.1",
     "resize-observer-polyfill": "^1.5.1",
     "sass-loader": "^8.0.0",
-    "vue-async-computed": "^3.8.0",
+    "vue-async-computed": "^3.8.1",
     "vue-clipboard2": "^0.3.1",
     "vue-codemirror": "^4.0.6",
     "workerize-loader": "^1.1.0"
