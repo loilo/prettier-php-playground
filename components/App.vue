@@ -7,10 +7,10 @@
       'layout--with-ast': editorOptions.ast
     }"
   >
-    <UnsupportedIE/>
+    <UnsupportedIE />
 
-    <Header v-bind="{ version }" class="layout__header"/>
-    <Sidebar class="layout__sidebar"/>
+    <Header v-bind="{ version }" class="layout__header" />
+    <Sidebar class="layout__sidebar" />
 
     <!-- Input -->
     <CodemirrorEditor
@@ -19,7 +19,7 @@
       :options="cmInputOptions"
       class="layout__input"
     />
-    <CodemirrorInert v-if="cmIsInert" area="input"/>
+    <CodemirrorInert v-if="cmIsInert" area="input" />
 
     <!-- AST -->
     <CodemirrorEditor
@@ -28,7 +28,7 @@
       :options="cmAstOptions"
       class="layout__ast"
     />
-    <CodemirrorInert v-if="cmIsInert && editorOptions.ast" area="ast"/>
+    <CodemirrorInert v-if="cmIsInert && editorOptions.ast" area="ast" />
 
     <!-- Output -->
     <CodemirrorEditor
@@ -37,9 +37,9 @@
       :class="{ 'editor--with-error': outputContainsError }"
       class="layout__output"
     />
-    <CodemirrorInert v-if="cmIsInert" area="output"/>
+    <CodemirrorInert v-if="cmIsInert" area="output" />
 
-    <Footer/>
+    <Footer />
   </main>
 </template>
 
