@@ -319,6 +319,14 @@ export default {
         'input output'
         'footer footer';
     }
+
+    &--without-sidebar#{&}--with-ast {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        'header header header'
+        'input ast output'
+        'footer footer footer';
+    }
   }
 
   &__header {
