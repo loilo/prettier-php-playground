@@ -1,5 +1,5 @@
 import { version } from '@prettier/plugin-php/package.json'
-import dedent from 'dedent'
+import prettier from '../util/Formatter'
 
 const defaultPrettierOptions = {
   printWidth: 80,
@@ -17,8 +17,7 @@ const defaultEditorOptions = {
 }
 
 const defaultInput =
-  dedent`
-<?php
+  `<?php
 
 array_map(function($arg1,$arg2) use ( $var1, $var2 ) {
     return $arg1+$arg2/($var+$var2);
@@ -32,7 +31,12 @@ export const state = () => ({
   initialized: false,
   isMobile: false,
   showSidebar: 'auto',
-  version,
+  version: process.browser
+    ? localStorage.getItem('custom-plugin-code')
+      ? 'custom'
+      : version
+    : undefined,
+  versionCounter: 0,
   url: '#',
   editorOptions: { ...defaultEditorOptions },
 
@@ -58,6 +62,10 @@ export const mutations = {
   },
   setEditorOption(state, [option, value]) {
     state.editorOptions[option] = value
+  },
+  setVersion(state, version) {
+    state.version = version
+    state.versionCounter++
   },
 
   // IO data
@@ -98,6 +106,37 @@ export const actions = {
       // It should hide on large screens and show on small screens
       commit('setSidebarVisibility', state.isMobile)
     }
+  },
+  async useCustomPluginCode({ commit }, code) {
+    await prettier.useCustomPlugin(code)
+    commit('setVersion', 'custom')
+  },
+  async disableCustomPlugin({ commit }) {
+    await prettier.useCustomPlugin(false)
+    commit('setVersion', version)
+    localStorage.removeItem('custom-plugin-code')
+  },
+  async pickCustomPluginFile({ dispatch }, file) {
+    try {
+      const customPluginCode = await new Promise((resolve, reject) => {
+        const reader = new FileReader()
+        reader.onload = () => {
+          resolve(reader.result)
+        }
+        reader.onerror = reject
+        reader.readAsText(file)
+      })
+
+      await dispatch('useCustomPluginCode', customPluginCode)
+      localStorage.setItem('custom-plugin-code', customPluginCode)
+    } catch (error) {
+      if (error.message === 'Invalid plugin file') {
+        alert('Invalid plugin file')
+      } else {
+        console.error(error.message)
+        alert('An error happened. See the dev tools console for details.')
+      }
+    }
   }
 }
 
@@ -124,11 +163,13 @@ export const getters = {
     }
   },
   issueMarkdown: (state, getters) => `${
-    state.version
+    state.version === 'custom'
+      ? '**Plugin version: local plugin file**'
+      : state.version
       ? `**@prettier/plugin-php v${state.version}**
-`
-      : ''
-  }[Playground link](${state.url})
+[Playground link](${state.url})`
+      : '**Plugin version: unknown**'
+  }
 
 **Input:**
 \`\`\`php

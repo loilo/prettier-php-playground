@@ -166,6 +166,7 @@ module.exports = {
   },
 
   build: {
+    transpile: ['lodash-es'],
     extend(config) {
       config.output.globalObject = 'self'
 

@@ -1,4 +1,4 @@
-import throttle from 'lodash/throttle'
+import { throttle } from 'lodash-es'
 import ResizeObserver from 'resize-observer-polyfill'
 
 export default {

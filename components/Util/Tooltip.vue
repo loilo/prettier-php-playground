@@ -1,6 +1,11 @@
 <template>
-  <span class="tooltip" :class="{ 'tooltip--visible': visible }">
-    <slot/>
+  <span
+    aria-hidden="true"
+    class="tooltip"
+    :class="[`tooltip--position-${position}`, { 'tooltip--visible': visible }]"
+    :style="{ '--tooltip-color': color, '--tooltip-background': background }"
+  >
+    <slot />
     <svg
       class="tooltip__triangle"
       width="14px"
@@ -10,7 +15,10 @@
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
     >
-      <polygon fill="currentColor" points="0 0 7 7 14 0"></polygon>
+      <polygon
+        fill="currentColor"
+        :points="position === 'above' ? '0 0 7 7 14 0' : '0 7 7 0 14 7'"
+      ></polygon>
     </svg>
   </span>
 </template>
@@ -21,6 +29,18 @@ export default {
     visible: {
       type: Boolean,
       default: true
+    },
+    position: {
+      type: String,
+      default: 'above'
+    },
+    color: {
+      type: String,
+      default: '#ffffff'
+    },
+    background: {
+      type: String,
+      default: '#1a2b33'
     }
   }
 }
@@ -30,14 +50,13 @@ export default {
 .tooltip {
   position: absolute;
   left: 50%;
-  bottom: 100%;
   transform: translate(-50%, -0.35em);
 
   pointer-events: none;
 
   padding: 0.3em 0.6em;
-  background: #1a2b33;
-  color: #fff;
+  background: var(--tooltip-background);
+  color: var(--tooltip-color);
   border-radius: 3px;
   white-space: nowrap;
 
@@ -46,6 +65,22 @@ export default {
 
   transition: opacity 0.3s, filter 0.3s;
 
+  &--position-above {
+    bottom: 100%;
+  }
+
+  &--position-above &__triangle {
+    top: calc(100% - 1px);
+  }
+
+  &--position-below {
+    top: 100%;
+  }
+
+  &--position-below &__triangle {
+    bottom: calc(100% - 1px);
+  }
+
   &--visible {
     opacity: 1;
     filter: none;
@@ -53,9 +88,8 @@ export default {
   }
 
   &__triangle {
-    color: #1a2b33;
+    color: var(--tooltip-background);
     position: absolute;
-    top: calc(100% - 1px);
     left: 50%;
     transform: translateX(-50%);
   }

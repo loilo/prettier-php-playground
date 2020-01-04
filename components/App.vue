@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import throttle from 'lodash/throttle'
+import { throttle } from 'lodash-es'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 
 import Header from './Layout/Header'
@@ -59,8 +59,12 @@ import ClipboardButton from './Button/ClipboardButton'
 import RepositoryButton from './Button/RepositoryButton'
 import GitHubButton from './Button/GitHubButton'
 import IconButton from './Button/IconButton'
-import Prettifier from 'workerize-loader!../util/Prettifier'
+import prettier from '../util/Formatter'
 import { write as writeState, read as readState } from '../util/UrlState'
+
+if (process.browser) {
+  self.prettier = prettier
+}
 
 export default {
   components: {
@@ -82,11 +86,12 @@ export default {
     window: Object
   },
   data: () => ({
-    prettier: process.browser ? new Prettifier() : null,
+    prettier,
     inertReasons: []
   }),
   computed: {
     ...mapState([
+      'versionCounter',
       'initialized',
       'showSidebar',
       'version',
@@ -142,9 +147,12 @@ export default {
   asyncComputed: {
     result: {
       async get() {
+        // Reference this to make it reevaluate the result
+        this.versionCounter
+
         try {
-          return this.prettier
-            ? await this.prettier.format(
+          return prettier
+            ? await prettier.format(
                 this.input,
                 this.prettierOptions,
                 this.editorOptions
@@ -219,7 +227,9 @@ export default {
 
     this.$store.commit('setMobile', !this.window.is.atLeast.tablet)
   },
-  mounted() {
+  async mounted() {
+    const customPluginCode = localStorage.getItem('custom-plugin-code')
+
     this.$store.commit('setUrl', window.location.href)
     const state = readState()
 
@@ -227,7 +237,11 @@ export default {
       this.$store.commit('setJsonState', state)
     }
 
-    self.prettier = this.prettier
+    if (customPluginCode) {
+      await this.$store.dispatch('useCustomPluginCode', customPluginCode)
+    } else {
+      await this.$store.dispatch('disableCustomPlugin')
+    }
 
     this.$nextTick(() => {
       this.$store.commit('initializeApp')
@@ -237,6 +251,16 @@ export default {
 </script>
 
 <style lang="scss">
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
 .layout {
   margin: 0 auto;
   display: grid;
