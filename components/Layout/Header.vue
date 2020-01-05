@@ -36,7 +36,7 @@
           &nbsp;
           <Button
             v-if="version === 'custom'"
-            class="custom-plugin-file"
+            class="custom-plugin-button"
             @click="pluginFileReset"
           >
             <Tooltip
@@ -48,7 +48,7 @@
               Disable custom plugin
             </Tooltip>
             <svg
-              class="custom-plugin-file__icon"
+              class="custom-plugin-button__icon"
               aria-hidden="true"
               focusable="false"
               role="img"
@@ -63,7 +63,7 @@
             <span class="visually-hidden">Disable custom plugin</span>
           </Button>
           <Button
-            class="custom-plugin-file"
+            class="custom-plugin-button"
             ref="customPluginButton"
             @click="$refs.customPluginFile.click()"
           >
@@ -79,7 +79,7 @@
             </Tooltip>
 
             <svg
-              class="custom-plugin-file__icon"
+              class="custom-plugin-button__icon"
               aria-hidden="true"
               focusable="false"
               role="img"
@@ -260,7 +260,7 @@ export default {
   }
 }
 
-.custom-plugin-file {
+.custom-plugin-button.custom-plugin-button {
   position: relative;
   transition: color 0.2s;
   padding: 0 0.35em;
