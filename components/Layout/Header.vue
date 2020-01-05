@@ -260,7 +260,7 @@ export default {
   }
 }
 
-.custom-plugin-button.custom-plugin-button {
+.header .custom-plugin-button {
   position: relative;
   transition: color 0.2s;
   padding: 0 0.35em;
