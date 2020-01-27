@@ -13,7 +13,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "@prettier/plugin-php": "^0.12.0",
     "composite-symbol": "^1.0.1",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.0",
     "dedent": "^0.7.0",
     "github-buttons": "^2.6.0",
     "hammerjs": "^2.0.8",
