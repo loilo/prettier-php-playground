@@ -3,6 +3,7 @@ const webpack = require('webpack')
 
 const REPO_NAME = 'prettier-php-playground'
 const GH_PAGES = process.env.DEPLOY_ENV === 'GH_PAGES'
+const IS_PREVIEW = process.env.PREVIEW === '1'
 const routerBase = GH_PAGES
   ? {
       router: {
@@ -172,7 +173,8 @@ module.exports = {
 
       config.plugins.push(
         new webpack.DefinePlugin({
-          ROOT: JSON.stringify(ROOT)
+          ROOT: JSON.stringify(ROOT),
+          PREVIEW: JSON.stringify(IS_PREVIEW)
         })
       )
     }
