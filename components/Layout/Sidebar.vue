@@ -71,31 +71,15 @@
           <option value="5.1">5.1</option>
           <option value="5.2">5.2</option>
           <option value="5.3">5.3</option>
-          <option value="5.4">5.4</option>
+          <option value="5.4" selected>5.4</option>
           <option value="5.5">5.5</option>
           <option value="5.6">5.6</option>
-          <option value="7.0" selected>7.0</option>
+          <option value="7.0">7.0</option>
           <option value="7.1">7.1</option>
           <option value="7.2">7.2</option>
           <option value="7.3">7.3</option>
           <option value="7.4">7.4</option>
         </select>
-      </label>
-      <label
-        class="sidebar__option"
-        title="Whether to insert trailing commas where applicable"
-      >
-        <input
-          type="checkbox"
-          :checked="prettierOptions.trailingCommaPHP"
-          @change="
-            setPrettierOption([
-              'trailingCommaPHP',
-              !prettierOptions.trailingCommaPHP
-            ])
-          "
-        />
-        --trailing-comma-php
       </label>
       <label class="sidebar__option" title="Where to put opening braces">
         --brace-style
@@ -108,6 +92,22 @@
           <option value="psr-2" selected>PSR-2</option>
           <option value="1tbs">1TBS</option>
         </select>
+      </label>
+      <label
+        class="sidebar__option"
+        title="Whether to insert trailing commas where applicable"
+      >
+        <input
+          type="checkbox"
+          :checked="prettierOptions.trailingCommaPHP"
+          @change="
+            setPrettierOption([
+              'trailingCommaPHP',
+              !prettierOptions.trailingCommaPHP,
+            ])
+          "
+        />
+        --trailing-comma-php
       </label>
     </details>
     <details class="sidebar__group" open>
@@ -163,14 +163,14 @@ import { mapMutations, mapState } from 'vuex'
 
 export default {
   components: {
-    GitHubButton
+    GitHubButton,
   },
   computed: {
-    ...mapState(['prettierOptions', 'editorOptions'])
+    ...mapState(['prettierOptions', 'editorOptions']),
   },
   methods: {
-    ...mapMutations(['resetOptions', 'setPrettierOption', 'setEditorOption'])
-  }
+    ...mapMutations(['resetOptions', 'setPrettierOption', 'setEditorOption']),
+  },
 }
 </script>
 
