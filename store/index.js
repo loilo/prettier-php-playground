@@ -6,7 +6,8 @@ const defaultPrettierOptions = {
   tabWidth: 4,
   useTabs: false,
   singleQuote: false,
-  trailingCommaPHP: 'none',
+  phpVersion: '5.4',
+  trailingCommaPHP: true,
   braceStyle: 'psr-2',
   requirePragma: false,
   insertPragma: false

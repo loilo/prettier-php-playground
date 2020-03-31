@@ -2,18 +2,26 @@
   <aside class="sidebar">
     <details class="sidebar__group" open>
       <summary class="sidebar__headline">Options</summary>
-      <label class="sidebar__option" title="The line length where Prettier will try wrap.">
+      <label
+        class="sidebar__option"
+        title="The line length where Prettier will try wrap."
+      >
         --print-width
         <input
           type="number"
           :value="prettierOptions.printWidth"
-          @input="setPrettierOption(['printWidth', +$event.currentTarget.value])"
+          @input="
+            setPrettierOption(['printWidth', +$event.currentTarget.value])
+          "
           min="0"
           step="1"
           size="3"
-        >
+        />
       </label>
-      <label class="sidebar__option" title="Number of spaces per indentation level.">
+      <label
+        class="sidebar__option"
+        title="Number of spaces per indentation level."
+      >
         --tab-width
         <input
           type="number"
@@ -22,46 +30,84 @@
           min="0"
           step="1"
           size="2"
-        >
+        />
       </label>
-      <label class="sidebar__option" title="Indent with tabs instead of spaces.">
+      <label
+        class="sidebar__option"
+        title="Indent with tabs instead of spaces."
+      >
         <input
           type="checkbox"
           :checked="prettierOptions.useTabs"
           @change="setPrettierOption(['useTabs', !prettierOptions.useTabs])"
-        > --use-tabs
+        />
+        --use-tabs
       </label>
-      <label class="sidebar__option" title="Use single quotes instead of double quotes.">
+      <label
+        class="sidebar__option"
+        title="Use single quotes instead of double quotes."
+      >
         <input
           type="checkbox"
           :checked="prettierOptions.singleQuote"
-          @change="setPrettierOption(['singleQuote', !prettierOptions.singleQuote])"
-        > --single-quote
+          @change="
+            setPrettierOption(['singleQuote', !prettierOptions.singleQuote])
+          "
+        />
+        --single-quote
       </label>
     </details>
     <details class="sidebar__group" open>
       <summary class="sidebar__headline">PHP</summary>
-      <label class="sidebar__option" title="When to insert trailing commas">
-        --trailing-comma-php
+      <label class="sidebar__option" title="Which PHP version to target">
+        --php-version
         <select
-          :value="prettierOptions.trailingCommaPHP"
-          @change="setPrettierOption(['trailingCommaPHP', $event.currentTarget.value])"
+          :value="prettierOptions.phpVersion"
+          @change="
+            setPrettierOption(['phpVersion', $event.currentTarget.value])
+          "
         >
-          <option value="all">all</option>
-          <option value="php7.2">PHP 7.2</option>
-          <option value="php5">PHP 5</option>
-          <option value="none" selected>none</option>
+          <option value="5.0">5.0</option>
+          <option value="5.1">5.1</option>
+          <option value="5.2">5.2</option>
+          <option value="5.3">5.3</option>
+          <option value="5.4" selected>5.4</option>
+          <option value="5.5">5.5</option>
+          <option value="5.6">5.6</option>
+          <option value="7.0">7.0</option>
+          <option value="7.1">7.1</option>
+          <option value="7.2">7.2</option>
+          <option value="7.3">7.3</option>
+          <option value="7.4">7.4</option>
         </select>
       </label>
       <label class="sidebar__option" title="Where to put opening braces">
         --brace-style
         <select
           :value="prettierOptions.braceStyle"
-          @change="setPrettierOption(['braceStyle', $event.currentTarget.value])"
+          @change="
+            setPrettierOption(['braceStyle', $event.currentTarget.value])
+          "
         >
           <option value="psr-2" selected>PSR-2</option>
           <option value="1tbs">1TBS</option>
         </select>
+      </label>
+      <label
+        class="sidebar__option"
+        title="Whether to insert trailing commas where applicable"
+      >
+        <input
+          type="checkbox"
+          :checked="prettierOptions.trailingCommaPHP"
+          @change="
+            setPrettierOption([
+              'trailingCommaPHP',
+              !prettierOptions.trailingCommaPHP,
+            ])
+          "
+        />
+        --trailing-comma-php
       </label>
     </details>
     <details class="sidebar__group" open>
@@ -73,8 +119,11 @@
         <input
           type="checkbox"
           :checked="prettierOptions.insertPragma"
-          @change="setPrettierOption(['insertPragma', !prettierOptions.insertPragma])"
-        > --insert-pragma
+          @change="
+            setPrettierOption(['insertPragma', !prettierOptions.insertPragma])
+          "
+        />
+        --insert-pragma
       </label>
       <label
         class="sidebar__option"
@@ -83,8 +132,11 @@
         <input
           type="checkbox"
           :checked="prettierOptions.requirePragma"
-          @change="setPrettierOption(['requirePragma', !prettierOptions.requirePragma])"
-        > --require-pragma
+          @change="
+            setPrettierOption(['requirePragma', !prettierOptions.requirePragma])
+          "
+        />
+        --require-pragma
       </label>
     </details>
     <details class="sidebar__group" open>
@@ -94,7 +146,8 @@
           type="checkbox"
           :checked="editorOptions.ast"
           @change="setEditorOption(['ast', !editorOptions.ast])"
-        > show AST
+        />
+        show AST
       </label>
     </details>
 
@@ -110,14 +163,14 @@ import { mapMutations, mapState } from 'vuex'
 
 export default {
   components: {
-    GitHubButton
+    GitHubButton,
   },
   computed: {
-    ...mapState(['prettierOptions', 'editorOptions'])
+    ...mapState(['prettierOptions', 'editorOptions']),
   },
   methods: {
-    ...mapMutations(['resetOptions', 'setPrettierOption', 'setEditorOption'])
-  }
+    ...mapMutations(['resetOptions', 'setPrettierOption', 'setEditorOption']),
+  },
 }
 </script>
 
