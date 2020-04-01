@@ -23,7 +23,7 @@
             rel="noopener"
             class="header__version-link"
           >
-            v{{ version }}&nbsp;(experimental)
+            v{{ version }}
           </a>
           <form hidden ref="customPluginForm">
             <input

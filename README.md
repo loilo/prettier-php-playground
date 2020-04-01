@@ -1,6 +1,6 @@
 # Prettier PHP Playground
 
-This is a temporary playground for Prettier's experimental [PHP Plugin](https://github.com/prettier/plugin-php), written in [Vue.js](https://vuejs.org) with [Nuxt](https://nuxtjs.org).
+This is a temporary playground for Prettier's [PHP Plugin](https://github.com/prettier/plugin-php), written in [Vue.js](https://vuejs.org) with [Nuxt](https://nuxtjs.org).
 
 [Try it out online!](https://loilo.github.io/prettier-php-playground/)
 
