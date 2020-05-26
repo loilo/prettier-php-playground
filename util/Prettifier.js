@@ -1,12 +1,13 @@
 import prettier from 'prettier/standalone'
-import HtmlPlugin from 'prettier/parser-html'
-import PhpPlugin from '@prettier/plugin-php/standalone'
+import BabelPlugin from 'prettier/parser-babel'
+import TypescriptPlugin from 'prettier/parser-typescript'
+import * as PegjsPlugin from 'prettier-plugin-pegjs'
 
-let plugin = PhpPlugin
+let plugin = PegjsPlugin
 
 export async function useCustomPlugin(code) {
   if (!code) {
-    plugin = PhpPlugin
+    plugin = PegjsPlugin
     return
   }
 
@@ -18,7 +19,7 @@ export async function useCustomPlugin(code) {
 
     if (
       typeof self.prettierPlugins !== 'object' ||
-      typeof self.prettierPlugins.php !== 'object'
+      typeof self.prettierPlugins["pegjs-parser"] !== 'object'
     ) {
       throw new Error()
     }
@@ -29,7 +30,7 @@ export async function useCustomPlugin(code) {
     delete self.prettier
   }
 
-  plugin = self.prettierPlugins.php
+  plugin = self.prettierPlugins["pegjs-parser"]
   delete self.prettierPlugins
 }
 
@@ -37,16 +38,17 @@ export async function format(code, prettierOptions = {}, editorOptions = {}) {
   try {
     const parseOptions = {
       ...prettierOptions,
-      plugins: [HtmlPlugin, plugin],
-      parser: 'php'
+      plugins: [BabelPlugin, TypescriptPlugin, plugin],
+      parser: 'pegjs-parser',
     }
+    console.log(prettier, parseOptions)
 
     return {
       type: 'formatted',
       code: prettier.format(code, parseOptions),
       ast: editorOptions.ast
         ? prettier.__debug.parse(code, parseOptions).ast
-        : null
+        : null,
     }
   } catch (err) {
     if (err instanceof SyntaxError) {
@@ -55,12 +57,12 @@ export async function format(code, prettierOptions = {}, editorOptions = {}) {
         message: err.message.match(/^(.+)(\n|$)/)[1],
         line: err.loc.start.line,
         column: err.loc.start.column,
-        frame: err.codeFrame
+        frame: err.codeFrame,
       }
     } else {
       return {
         type: 'error',
-        message: err.message || String(err)
+        message: err.message || String(err),
       }
     }
   }

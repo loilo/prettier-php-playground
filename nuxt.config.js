@@ -1,7 +1,7 @@
 const pkg = require('./package')
 const webpack = require('webpack')
 
-const REPO_NAME = 'prettier-php-playground'
+const REPO_NAME = 'prettier-pegjs-playground'
 const GH_PAGES = process.env.DEPLOY_ENV === 'GH_PAGES'
 const IS_PREVIEW = process.env.PREVIEW === '1'
 const routerBase = GH_PAGES
@@ -24,7 +24,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Prettier PHP Playground',
+    title: 'Prettier Peghs Playground',
     meta: [
       {
         charset: 'utf-8'
@@ -44,11 +44,11 @@ module.exports = {
       },
       {
         name: 'application-name',
-        content: 'Prettier PHP'
+        content: 'Prettier Pegjs'
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: 'Prettier PHP'
+        content: 'Prettier Pegjs'
       },
       {
         name: 'theme-color',
@@ -125,9 +125,9 @@ module.exports = {
   modules: ['@nuxtjs/pwa'],
 
   manifest: {
-    name: 'Prettier PHP Playground',
-    short_name: 'Prettier PHP',
-    description: 'A playground for the Prettier PHP plugin',
+    name: 'Prettier Pegjs Playground',
+    short_name: 'Prettier Pegjs',
+    description: 'A playground for the Prettier Pegjs plugin',
     lang: 'en',
     display: 'fullscreen',
     background_color: '#1a2b34',

@@ -17,8 +17,8 @@
       <!-- prettier-ignore -->
       <span>
         This is a playground preview for testing upcoming versions of the
-        Prettier PHP Plugin. You can find the current stable playground
-        <a href="https://loilo.github.io/prettier-php-playground/">here</a>.
+        Prettier Pegjs Plugin. You can find the current stable playground
+        <a href="https://siefkenj.github.io/prettier-pegjs-playground/">here</a>.
       </span>
     </div>
     <Header v-bind="{ version }" class="layout__header" />
@@ -133,7 +133,7 @@ export default {
     cmInputOptions() {
       return {
         ...this.cmBaseOptions,
-        mode: 'application/x-httpd-php',
+        mode: 'pegjs',
         rulers: [{ column: this.prettierOptions.printWidth, color: '#eee' }]
       }
     },
@@ -153,7 +153,7 @@ export default {
           : [{ column: this.prettierOptions.printWidth, color: '#444' }],
         mode: this.outputContainsError
           ? 'text/plain'
-          : 'application/x-httpd-php'
+          : 'pegjs'
       }
     }
   },

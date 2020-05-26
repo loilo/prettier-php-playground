@@ -1,7 +1,7 @@
 {
-  "name": "prettier-php-playground",
+  "name": "prettier-pegjs-playground",
   "version": "1.0.0",
-  "description": "A playground for the experimental Prettier PHP plugin",
+  "description": "A playground for the experimental Prettier Pegjs plugin",
   "author": "Florian Reuschel <florian@loilo.de>",
   "private": true,
   "scripts": {
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
-    "@prettier/plugin-php": "~0.14.1",
     "composite-symbol": "^1.0.2",
     "cross-env": "^7.0.2",
     "dedent": "^0.7.0",
@@ -21,6 +20,7 @@
     "lz-string": "^1.4.4",
     "nuxt": "^2.12.2",
     "prettier": "^2.0.5",
+    "prettier-plugin-pegjs": "latest",
     "resize-observer-polyfill": "^1.5.1",
     "vue-async-computed": "^3.8.2",
     "vue-clipboard2": "^0.3.1",

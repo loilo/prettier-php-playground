@@ -1,14 +1,12 @@
-import { version } from '@prettier/plugin-php/package.json'
+import { version } from 'prettier-plugin-pegjs/package.json'
 import prettier from '../util/Formatter'
 
 const defaultPrettierOptions = {
   printWidth: 80,
-  tabWidth: 4,
+  tabWidth: 2,
   useTabs: false,
   singleQuote: false,
-  phpVersion: '5.4',
-  trailingCommaPHP: true,
-  braceStyle: 'psr-2',
+  actionParser: 'babel',
   requirePragma: false,
   insertPragma: false
 }
@@ -18,14 +16,10 @@ const defaultEditorOptions = {
 }
 
 const defaultInput =
-  `<?php
-
-array_map(function($arg1,$arg2) use ( $var1, $var2 ) {
-    return $arg1+$arg2/($var+$var2);
-}, array("complex"=>"code","with"=>
-    function() {return "inconsistent";}
-,"formatting"=>"is", "hard" => "to", "maintain"=>true));
-` + '\n'
+  `Expression    = head:Term tail:(_("+"/"-")_ Term) * {
+return tail.reduce(function(result, element) {if (element[1] === "+") { return result + element[3]; }
+        if (element[1] === "-") { return result - element[3]; }
+      }, head)}` + '\n'
 
 export const state = () => ({
   // UI & Editor
@@ -167,23 +161,23 @@ export const getters = {
     state.version === 'custom'
       ? '**Plugin version: local plugin file**'
       : state.version
-      ? `**@prettier/plugin-php v${state.version}**
+      ? `**prettier-plugin-pegjs v${state.version}**
 [Playground link](${state.url})`
       : '**Plugin version: unknown**'
   }
 
 **Input:**
-\`\`\`php
+\`\`\`
 ${state.input}
 \`\`\`
 
 **Output:**
-\`\`\`php
+\`\`\`
 ${getters.output}
 \`\`\`
 `,
   issueLink: (_, getters) =>
-    `https://github.com/prettier/plugin-php/issues/new?body=${encodeURIComponent(
+    `https://github.com/siefkenj/prettier-plugin-pegjs/issues/new?body=${encodeURIComponent(
       getters.issueMarkdown
     )}`,
 

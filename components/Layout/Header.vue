@@ -7,7 +7,7 @@
         alt="The Prettier logo"
       />
       <h1 class="header__headline">
-        Prettier PHP
+        Prettier Pegjs
         <span class="header__version" v-if="version">
           <span class="header__version--local" v-if="version === 'custom'">
             from local file
@@ -16,8 +16,8 @@
             v-else
             :href="
               version
-                ? `https://github.com/prettier/plugin-php/tree/v${version}`
-                : 'https://github.com/prettier/plugin-php/tree/master'
+                ? `https://github.com/siefkenj/prettier-plugin-pegjs/tree/v${version}`
+                : 'https://github.com/siefkenj/prettier-plugin-pegjs/tree/master'
             "
             target="_blank"
             rel="noopener"
@@ -100,7 +100,7 @@
     <aside class="header__repo-buttons">
       <GitHubButton
         type="link"
-        href="https://github.com/Loilo/prettier-php-playground"
+        href="https://github.com/siefkenj/prettier-pegjs-playground"
         target="_blank"
         class="header__own-repo-button"
       >
@@ -119,8 +119,8 @@
         </svg>
         Playground
       </GitHubButton>
-      <RepositoryButton repo="prettier/plugin-php" show-stars>
-        Prettier PHP Plugin
+      <RepositoryButton repo="siefkenj/prettier-plugin-pegjs" show-stars>
+        Prettier Pegjs Plugin
       </RepositoryButton>
     </aside>
   </header>

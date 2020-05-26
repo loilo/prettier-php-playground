@@ -58,56 +58,18 @@
       </label>
     </details>
     <details class="sidebar__group" open>
-      <summary class="sidebar__headline">PHP</summary>
-      <label class="sidebar__option" title="Which PHP version to target">
-        --php-version
+      <summary class="sidebar__headline">Pegjs</summary>
+      <label class="sidebar__option" title="Which parser do you want to use for Pegjs actions (the part inside the {...})?">
+        --action-parser
         <select
-          :value="prettierOptions.phpVersion"
+          :value="prettierOptions.actionParser"
           @change="
-            setPrettierOption(['phpVersion', $event.currentTarget.value])
+            setPrettierOption(['actionParser', $event.currentTarget.value])
           "
         >
-          <option value="5.0">5.0</option>
-          <option value="5.1">5.1</option>
-          <option value="5.2">5.2</option>
-          <option value="5.3">5.3</option>
-          <option value="5.4" selected>5.4</option>
-          <option value="5.5">5.5</option>
-          <option value="5.6">5.6</option>
-          <option value="7.0">7.0</option>
-          <option value="7.1">7.1</option>
-          <option value="7.2">7.2</option>
-          <option value="7.3">7.3</option>
-          <option value="7.4">7.4</option>
+          <option value="babel">babel</option>
+          <option value="typescript">typescript</option>
         </select>
-      </label>
-      <label class="sidebar__option" title="Where to put opening braces">
-        --brace-style
-        <select
-          :value="prettierOptions.braceStyle"
-          @change="
-            setPrettierOption(['braceStyle', $event.currentTarget.value])
-          "
-        >
-          <option value="psr-2" selected>PSR-2</option>
-          <option value="1tbs">1TBS</option>
-        </select>
-      </label>
-      <label
-        class="sidebar__option"
-        title="Whether to insert trailing commas where applicable"
-      >
-        <input
-          type="checkbox"
-          :checked="prettierOptions.trailingCommaPHP"
-          @change="
-            setPrettierOption([
-              'trailingCommaPHP',
-              !prettierOptions.trailingCommaPHP,
-            ])
-          "
-        />
-        --trailing-comma-php
       </label>
     </details>
     <details class="sidebar__group" open>

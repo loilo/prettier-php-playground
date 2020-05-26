@@ -7803,6 +7803,13 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
+prettier-plugin-pegjs@latest:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-pegjs/-/prettier-plugin-pegjs-0.2.0.tgz#d039140ec24f65e28271aff6fe1b44583c24cb20"
+  integrity sha512-FulArNaf7l7bia0xbOfafMYaI6yZSzJKTIisIs6AN6r7crOSg9WKnCgRb1EoLNoKp8UrGWeBlL0dyG0NuycTBQ==
+  dependencies:
+    prettier "^2.0.5"
+
 prettier@^1.18.2:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
