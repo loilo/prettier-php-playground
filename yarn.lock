@@ -1383,14 +1383,14 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
-"@prettier/plugin-php@~0.14.1":
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.14.1.tgz#b5cfbe3912271953f1483f970abc47ace76ff74c"
-  integrity sha512-sgm9kkTb24VUtoAHBdAp9c26vsNOiPl9efZvhliSdieJmaoUkAeqlb7tPB5aFcj7otuvPwxz+hTzIJZ7gRYGEw==
+"@prettier/plugin-php@~0.14.2":
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.14.2.tgz#d19c6fb8d177633f3d404d733f0e8cfc23741b3e"
+  integrity sha512-sG713Vb/eKtlB4rsL1+7mDD85jC2cjop8z/LE2QZHBtbopemfa4okEha01fgCqMaLJ80NBwGP9SZIwY9MR/w6w==
   dependencies:
     linguist-languages "^7.5.1"
     mem "^6.0.1"
-    php-parser "3.0.1"
+    php-parser "github:glayzzle/php-parser#5a0e2e1bf12517bd1c544c0f4e68482d0362a7b5"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -7020,10 +7020,10 @@ phin@^2.9.1:
   resolved "https://registry.yarnpkg.com/phin/-/phin-2.9.3.tgz#f9b6ac10a035636fb65dfc576aaaa17b8743125c"
   integrity sha512-CzFr90qM24ju5f88quFC/6qohjC144rehe5n6DH900lgXmUe86+xCKc10ev56gRKC4/BkHUoG4uSiQgBiIXwDA==
 
-php-parser@3.0.1:
+"php-parser@github:glayzzle/php-parser#5a0e2e1bf12517bd1c544c0f4e68482d0362a7b5":
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.0.1.tgz#69ae957362717cfefbc58eb208d12e48dab2e809"
-  integrity sha512-m6CBPHOoMkzEHoXG0rhEg/VegSNemUNQepHnYtrRgTAh8rsqoO65KqQ32KJ5xe2iplhO0jdwd1UJ9Ea0yHsgYQ==
+  uid "5a0e2e1bf12517bd1c544c0f4e68482d0362a7b5"
+  resolved "https://codeload.github.com/glayzzle/php-parser/tar.gz/5a0e2e1bf12517bd1c544c0f4e68482d0362a7b5"
 
 picomatch@^2.0.4:
   version "2.0.7"
