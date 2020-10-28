@@ -1502,10 +1502,10 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
-"@prettier/plugin-php@~0.15.1":
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.15.1.tgz#e8d185ae37de8223aa70a02b4d33be1791816b08"
-  integrity sha512-uQiaGGXCs0uqpck1LyDU+V4Z50Qqml7ltajPQL+DB43r5aHVawDCSkgLGYZJSb1g+hK5eBmdVBqMa7ED8EBjbA==
+"@prettier/plugin-php@~0.15.2":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-php/-/plugin-php-0.15.2.tgz#d692cdb374e146ff7e0c33a78901ded564fb9c8a"
+  integrity sha512-6ckIJXJ8+DzSa2tK8qQbO2GO77BKR125ObaXW30t8qDbrI/ijL4ZG7xH3MVnFEvTwUi0Soenc6ugQtw6LPJasQ==
   dependencies:
     linguist-languages "^7.5.1"
     mem "^8.0.0"
@@ -4027,10 +4027,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-prettier@^6.14.0:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.14.0.tgz#390e7863a8ae99970981933826476169285b3a27"
-  integrity sha512-DbVwh0qZhAC7CNDWcq8cBdK6FcVHiMTKmCypOPWeZkp9hJ8xYwTaWSa6bb6cjfi8KOeJy0e9a8Izxyx+O4+gCQ==
+eslint-config-prettier@^6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
+  integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
   dependencies:
     get-stdin "^6.0.0"
 
