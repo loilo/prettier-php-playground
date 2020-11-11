@@ -44,6 +44,7 @@
     "nodemon": "^2.0.4",
     "sass-loader": "^8.0.2",
     "workerize-loader": "^1.2.1",
+    "yarn-audit-fix": "^3.2.12",
     "yarpm": "^0.2.1"
   }
 }
