@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.5",
-    "@prettier/plugin-php": "~0.16.1",
+    "@prettier/plugin-php": "~0.16.2",
     "composite-symbol": "^1.0.2",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
