@@ -7,8 +7,8 @@ const IS_PREVIEW = process.env.PREVIEW === '1'
 const routerBase = GH_PAGES
   ? {
       router: {
-        base: `/${REPO_NAME}/`
-      }
+        base: `/${REPO_NAME}/`,
+      },
     }
   : {}
 
@@ -16,7 +16,7 @@ const ROOT = GH_PAGES ? `/${REPO_NAME}` : ''
 const NON_EMPTY_ROOT = GH_PAGES ? `/${REPO_NAME}` : '/'
 
 module.exports = {
-  mode: 'universal',
+  target: 'static',
 
   ...routerBase,
 
@@ -27,67 +27,67 @@ module.exports = {
     title: 'Prettier PHP Playground',
     meta: [
       {
-        charset: 'utf-8'
+        charset: 'utf-8',
       },
       {
         name: 'description',
         hid: 'description',
-        content: pkg.description
+        content: pkg.description,
       },
       {
         name: 'mobile-web-app-capable',
-        content: 'yes'
+        content: 'yes',
       },
       {
         name: 'apple-mobile-web-app-capable',
-        content: 'yes'
+        content: 'yes',
       },
       {
         name: 'application-name',
-        content: 'Prettier PHP'
+        content: 'Prettier PHP',
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: 'Prettier PHP'
+        content: 'Prettier PHP',
       },
       {
         name: 'theme-color',
-        content: '#1a2b34'
+        content: '#1a2b34',
       },
       {
         name: 'msapplication-navbutton-color',
-        content: '#1a2b34'
+        content: '#1a2b34',
       },
       {
         name: 'apple-mobile-web-app-status-bar-style',
-        content: 'black-translucent'
+        content: 'black-translucent',
       },
       {
         name: 'msapplication-starturl',
-        content: NON_EMPTY_ROOT
+        content: NON_EMPTY_ROOT,
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
-      }
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      },
     ],
     link: [
       {
         rel: 'icon',
-        href: ROOT + '/icon.png'
+        href: ROOT + '/icon.png',
       },
       {
         rel: 'apple-touch-icon',
-        href: ROOT + '/icon.png'
-      }
-    ]
+        href: ROOT + '/icon.png',
+      },
+    ],
   },
 
   /*
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#fff'
+    color: '#fff',
   },
 
   /*
@@ -95,28 +95,19 @@ module.exports = {
    */
   css: [
     // lib css
-    'codemirror/lib/codemirror.css'
+    'codemirror/lib/codemirror.css',
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    {
-      src: '~plugins/codemirror.js',
-      ssr: false
-    },
-    {
-      src: '~plugins/clipboard.js',
-      ssr: false
-    },
-    {
-      src: '~plugins/touch-events.js',
-      ssr: false
-    },
+    '~plugins/codemirror.client.js',
+    '~plugins/clipboard.client.js',
+    '~plugins/touch-events.client.js',
     '~plugins/async-computed.js',
     '~plugins/event-bus.js',
-    '~plugins/root.js'
+    '~plugins/root.js',
   ],
 
   /*
@@ -136,34 +127,34 @@ module.exports = {
       {
         src: 'https://prettier.io/icon.png',
         sizes: '48x48',
-        type: 'image/png'
+        type: 'image/png',
       },
       {
         src: 'https://prettier.io/icon.png',
         sizes: '72x72',
-        type: 'image/png'
+        type: 'image/png',
       },
       {
         src: 'https://prettier.io/icon.png',
         sizes: '96x96',
-        type: 'image/png'
+        type: 'image/png',
       },
       {
         src: 'https://prettier.io/icon.png',
         sizes: '144x144',
-        type: 'image/png'
+        type: 'image/png',
       },
       {
         src: 'https://prettier.io/icon.png',
         sizes: '168x168',
-        type: 'image/png'
+        type: 'image/png',
       },
       {
         src: 'https://prettier.io/icon.png',
         sizes: '192x192',
-        type: 'image/png'
-      }
-    ]
+        type: 'image/png',
+      },
+    ],
   },
 
   build: {
@@ -174,9 +165,9 @@ module.exports = {
       config.plugins.push(
         new webpack.DefinePlugin({
           ROOT: JSON.stringify(ROOT),
-          PREVIEW: JSON.stringify(IS_PREVIEW)
+          PREVIEW: JSON.stringify(IS_PREVIEW),
         })
       )
-    }
-  }
+    },
+  },
 }
