@@ -24,7 +24,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Prettier Peghs Playground',
+    title: 'Prettier Pegjs Playground',
     meta: [
       {
         charset: 'utf-8'
