@@ -119,7 +119,7 @@ export default {
     color: var(--hover-color);
   }
 
-  /deep/ {
+  ::v-deep {
     & > svg {
       width: auto;
       height: 24px;
