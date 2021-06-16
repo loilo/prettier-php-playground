@@ -1,3 +1,24 @@
+/*!
+     * Determine if an object is a Buffer
+     *
+     * @author   Feross Aboukhadijeh <https://feross.org>
+     * @license  MIT
+     */
+
+/*!
+     * repeat-string <https://github.com/jonschlinkert/repeat-string>
+     *
+     * Copyright (c) 2014-2015, Jon Schlinkert.
+     * Licensed under the MIT License.
+     */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
 /*! *****************************************************************************
   Copyright (c) Microsoft Corporation.
 
@@ -13,6 +34,8 @@
   PERFORMANCE OF THIS SOFTWARE.
   ***************************************************************************** */
 
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
 /**
 	   * @license
 	   * Copyright Google Inc. All Rights Reserved.
@@ -24,6 +47,14 @@
 /**
 	 * @license
 	 * Copyright Google Inc. All Rights Reserved.
+	 *
+	 * Use of this source code is governed by an MIT-style license that can be
+	 * found in the LICENSE file at https://angular.io/license
+	 */
+
+/**
+	 * @license
+	 * Copyright Google LLC All Rights Reserved.
 	 *
 	 * Use of this source code is governed by an MIT-style license that can be
 	 * found in the LICENSE file at https://angular.io/license
@@ -66,7 +97,7 @@
 
 
 /*!
- * github-buttons v2.17.0
+ * github-buttons v2.18.1
  * (c) 2021 なつき
  * @license BSD-2-Clause
  */
