@@ -79,6 +79,7 @@
           <option value="7.2">7.2</option>
           <option value="7.3">7.3</option>
           <option value="7.4">7.4</option>
+          <option value="8.0">8.0</option>
         </select>
       </label>
       <label class="sidebar__option" title="Where to put opening braces">
