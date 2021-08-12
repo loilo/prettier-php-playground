@@ -19,7 +19,7 @@
     "hammerjs": "^2.0.8",
     "lodash-es": "^4.17.21",
     "lz-string": "^1.4.4",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "prettier": "^2.3.2",
     "resize-observer-polyfill": "^1.5.1",
     "vue-async-computed": "^3.9.0",
