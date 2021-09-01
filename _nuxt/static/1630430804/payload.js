@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/", {data:[{}],fetch:{},mutations:[["resetOptions",void 0],["setMobile",true]]});
