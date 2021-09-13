@@ -27,7 +27,7 @@
     "vue-codemirror": "^4.0.6"
   },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.4",
+    "@types/lodash-es": "^4.17.5",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
