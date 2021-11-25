@@ -31,25 +31,6 @@
 
 
 /*!
-  * vue-router v3.5.1
-  * (c) 2021 Evan You
-  * @license MIT
-  */
-
-/*!
- * Vue.js v2.6.12
- * (c) 2014-2020 Evan You
- * Released under the MIT License.
- */
-
-/*!
- * vuex v3.6.2
- * (c) 2021 Evan You
- * @license MIT
- */
-
-
-/*!
  * clipboard.js v2.0.8
  * https://clipboardjs.com/
  *
@@ -73,3 +54,10 @@
  *
  * Copyright (c) 2016 Jorik Tangelder;
  * Licensed under the MIT license */
+
+
+/*!
+ * github-buttons v2.20.1
+ * (c) 2021 なつき
+ * @license BSD-2-Clause
+ */
