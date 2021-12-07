@@ -4489,10 +4489,10 @@ git-url-parse@^11.4.3:
   dependencies:
     git-up "^4.0.0"
 
-github-buttons@^2.20.1:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.20.1.tgz#d5cf7b9cafc3c51f517b526fe0e293f0b3dc0604"
-  integrity sha512-UQpZJP7uVtbjy9vXuIMktmtoH9REy0V50iQnFQ56cyOqzDE8e/9WGedTMD8qVwp593Kyn+EKo2e4IKshoXBeZQ==
+github-buttons@^2.20.2:
+  version "2.20.2"
+  resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.20.2.tgz#1d26efff31dbce5fb59bb237ebb538691156f82b"
+  integrity sha512-MvdHtabOCHabh/tvBZ4qh9jmPKsLGT4XtAMx6jkP/MINKBhiQQiHlfxMuoxcHTVVPgU81jFsO7EMjLN4l52OoA==
 
 glob-parent@^3.1.0:
   version "3.1.0"
