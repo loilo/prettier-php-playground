@@ -1,12 +1,12 @@
-name: Deployment CI
+name: Test CI
 
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    paths-ignore:
+      - '*.md'
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +24,3 @@ jobs:
         run: npm run build
       - name: Run tests
         run: npm test
-      - uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
