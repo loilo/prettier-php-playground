@@ -20,7 +20,7 @@
     "lodash-es": "^4.17.21",
     "lz-string": "^1.4.4",
     "prettier": "^2.6.0",
-    "vue": "^3.2.32",
+    "vue": "^3.2.33",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
