@@ -439,6 +439,11 @@ export default {
   height: 100%;
 }
 
+.codemirror-container.height-auto {
+  // Need to add the !important here because codemirror-editor-vue3 uses inline styles to set the height
+  height: 100% !important;
+}
+
 .cm-tab {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBkPSJNMjE2LjQ2NCAzNi40NjVsLTcuMDcxIDcuMDdjLTQuNjg2IDQuNjg2LTQuNjg2IDEyLjI4NCAwIDE2Ljk3MUwzODcuODg3IDIzOUgxMmMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnYxMGMwIDYuNjI3IDUuMzczIDEyIDEyIDEyaDM3NS44ODdMMjA5LjM5MyA0NTEuNDk0Yy00LjY4NiA0LjY4Ni00LjY4NiAxMi4yODQgMCAxNi45NzFsNy4wNzEgNy4wN2M0LjY4NiA0LjY4NiAxMi4yODQgNC42ODYgMTYuOTcgMGwyMTEuMDUxLTIxMS4wNWM0LjY4Ni00LjY4NiA0LjY4Ni0xMi4yODQgMC0xNi45NzFMMjMzLjQzNCAzNi40NjVjLTQuNjg2LTQuNjg3LTEyLjI4NC00LjY4Ny0xNi45NyAweiIvPjwvc3ZnPg==');
   background-repeat: no-repeat;
