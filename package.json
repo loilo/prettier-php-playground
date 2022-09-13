@@ -11,7 +11,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@prettier/plugin-php": "^0.19.0",
+    "@prettier/plugin-php": "^0.19.1",
     "codemirror-editor-vue3": "^2.1.7",
     "comlink": "^4.3.1",
     "composite-symbol": "^1.0.2",
