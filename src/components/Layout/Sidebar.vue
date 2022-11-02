@@ -90,9 +90,11 @@
           @change="
             setPrettierOption(['braceStyle', $event.currentTarget.value])
           "
+          style="width: 100px"
         >
-          <option value="psr-2" selected>PSR-2</option>
+          <option value="per-cs" selected>PER CS</option>
           <option value="1tbs">1TBS</option>
+          <option value="psr-2">PSR-2 (Deprecated)</option>
         </select>
       </label>
       <label

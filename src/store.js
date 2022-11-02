@@ -8,7 +8,7 @@ const defaultPrettierOptions = {
   singleQuote: false,
   phpVersion: '5.4',
   trailingCommaPHP: true,
-  braceStyle: 'psr-2',
+  braceStyle: 'per-cs',
   requirePragma: false,
   insertPragma: false
 }
