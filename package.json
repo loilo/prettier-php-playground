@@ -19,7 +19,7 @@
     "hammerjs": "^2.0.8",
     "lodash-es": "^4.17.21",
     "lz-string": "^1.4.4",
-    "prettier": "^2.8.2",
+    "prettier": "^2.8.3",
     "vue": "^3.2.45",
     "vuex": "^4.1.0"
   },
