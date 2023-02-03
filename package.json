@@ -13,7 +13,7 @@
   "dependencies": {
     "@prettier/plugin-php": "^0.19.3",
     "codemirror-editor-vue3": "^2.1.8",
-    "comlink": "^4.4.0",
+    "comlink": "^4.4.1",
     "composite-symbol": "^1.0.2",
     "github-buttons": "^2.22.3",
     "hammerjs": "^2.0.8",
