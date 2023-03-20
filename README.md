@@ -1,60 +1,46 @@
-# Prettier Pegjs Playground
+# Getting Started with Create React App
 
-This is a temporary playground for Prettier's [Pegjs Plugin](https://github.com/siefkenj/prettier-plugin-pegjs), written in [Vue.js](https://vuejs.org) with [Nuxt](https://nuxtjs.org).
-It is a fork of the Prettier [PHP playground](https://loilo.github.io/prettier-php-playground/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Try it out online!](https://siefkenj.github.io/prettier-pegjs-playground/)
+## Available Scripts
 
-## Motivation
+In the project directory, you can run:
 
-The main purposes of this playground is
+### `npm start`
 
-  * making quick transformations on Pegjs code more comfortable
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Features
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-The Pegjs playground comes with the interface you know and love — it's almost a 1:1 clone of Prettier's own playground, but with some improvements:
+### `npm test`
 
-* **Offline First**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-  Thanks to [Service Workers](https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers), the playground just works™ when you're not connected to the internet.
-* **Mobile Support**
+### `npm run build`
 
-  Working with code is not all too common on mobile devices, but if you need it, we're here for you — the Pegjs playground features a functional mobile layout.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Contributing
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-To get the playground running on your machine:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-1. Clone this repository
+### `npm run eject`
 
-   ```bash
-   git clone https://github.com/siefkenj/prettier-pegjs-playground.git
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-2. Install dependencies
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-   ```bash
-   yarn install
-   ```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Then, if you want to work on the project locally with as much comfort as possible (hot reloading et al.), run:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```bash
-yarn run dev
-```
+## Learn More
 
-If you want to create a static site from your current work (in the projects `dist` folder) and then make that available to the browser, do:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```bash
-yarn run generate
-npx serve dist
-```
-
-Last but not least, if you want to create a static site how it's deployed to GitHub Pages (which is just the standard static site build process, but expects to not be in the website root but in a folder called `/prettier-pegjs-playground`), run the following
-
-```bash
-yarn run generate:gh-pages
-```
-
-You don't need to run that last command manually though — as soon as new commits are merged into the `master` branch, [Travis CI](https://travis-ci.org/siefkenj/prettier-pegjs-playground) will do the work of pushing it to GitHub Pages.
+To learn React, check out the [React documentation](https://reactjs.org/).
