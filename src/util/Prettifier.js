@@ -1,7 +1,7 @@
 import * as Comlink from 'comlink'
 
 import prettier from 'prettier/standalone'
-import HtmlPlugin from 'prettier/parser-html'
+import * as HtmlPlugin from 'prettier/plugins/html'
 import PhpPlugin from '@prettier/plugin-php/standalone'
 
 let plugin = PhpPlugin
@@ -44,9 +44,9 @@ class Prettifier {
 
       return {
         type: 'formatted',
-        code: prettier.format(code, parseOptions),
+        code: await prettier.format(code, parseOptions),
         ast: editorOptions.ast
-          ? prettier.__debug.parse(code, parseOptions).ast
+          ? await plugin.parsers.php.parse(code, parseOptions)
           : null
       }
     } catch (err) {
