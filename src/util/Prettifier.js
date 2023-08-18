@@ -2,7 +2,7 @@ import * as Comlink from 'comlink'
 
 import prettier from 'prettier/standalone'
 import * as HtmlPlugin from 'prettier/plugins/html'
-import PhpPlugin from '@prettier/plugin-php/standalone'
+import * as PhpPlugin from '@prettier/plugin-php/standalone'
 
 let plugin = PhpPlugin
 
