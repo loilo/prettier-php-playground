@@ -7,6 +7,7 @@ updates:
     time: "04:00"
   open-pull-requests-limit: 10
   ignore:
+  - dependency-name: sass
   - dependency-name: sass-loader
     versions:
     - "> 11.0.0, < 12"
