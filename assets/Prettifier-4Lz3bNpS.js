@@ -1,4 +1,4 @@
-var WD=Object.defineProperty;var GD=(t,n,i)=>n in t?WD(t,n,{enumerable:!0,configurable:!0,writable:!0,value:i}):t[n]=i;var oc=(t,n,i)=>(GD(t,typeof n!="symbol"?n+"":n,i),i);(function(){"use strict";function _mergeNamespaces(t,n){return n.forEach(function(i){i&&typeof i!="string"&&!Array.isArray(i)&&Object.keys(i).forEach(function(r){if(r!=="default"&&!(r in t)){var a=Object.getOwnPropertyDescriptor(i,r);Object.defineProperty(t,r,a.get?a:{enumerable:!0,get:function(){return i[r]}})}})}),Object.freeze(t)}/**
+var WD=Object.defineProperty;var GD=(t,n,i)=>n in t?WD(t,n,{enumerable:!0,configurable:!0,writable:!0,value:i}):t[n]=i;var oc=(t,n,i)=>GD(t,typeof n!="symbol"?n+"":n,i);(function(){"use strict";function _mergeNamespaces(t,n){return n.forEach(function(i){i&&typeof i!="string"&&!Array.isArray(i)&&Object.keys(i).forEach(function(r){if(r!=="default"&&!(r in t)){var a=Object.getOwnPropertyDescriptor(i,r);Object.defineProperty(t,r,a.get?a:{enumerable:!0,get:function(){return i[r]}})}})}),Object.freeze(t)}/**
  * @license
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: Apache-2.0
