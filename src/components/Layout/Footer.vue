@@ -197,26 +197,25 @@ export default {
   }
 
   &__mobile {
-    @media (min-width: 768px) {
-      display: none;
-    }
-
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0 1em;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   &__desktop {
     display: none;
+    padding: 0 0.5em;
+    justify-content: space-between;
+    align-items: center;
 
     @media (min-width: 768px) {
       display: flex;
     }
-
-    padding: 0 0.5em;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__inspired {
