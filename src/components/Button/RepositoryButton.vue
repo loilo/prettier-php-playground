@@ -80,12 +80,16 @@ export default {
     opacity: 0;
     filter: blur(4px);
 
-    transition: opacity 0.3s, filter 0.3s;
+    transition:
+      opacity 0.3s,
+      filter 0.3s;
 
     &--visible {
       opacity: 1;
       filter: none;
-      transition: opacity 0.1s, filter 0.175s;
+      transition:
+        opacity 0.1s,
+        filter 0.175s;
     }
   }
 }

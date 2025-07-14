@@ -271,7 +271,9 @@ export default {
     opacity: 0;
     filter: blur(4px);
     pointer-events: none;
-    transition: opacity 0.3s, filter 0.3s;
+    transition:
+      opacity 0.3s,
+      filter 0.3s;
   }
 
   &:hover {

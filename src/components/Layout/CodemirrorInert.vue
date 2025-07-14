@@ -1,5 +1,5 @@
 <template>
-  <div class="codemirror-inert" :style="{ 'grid-area': area }"/>
+  <div class="codemirror-inert" :style="{ 'grid-area': area }" />
 </template>
 
 <script>

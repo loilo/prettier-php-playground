@@ -163,9 +163,9 @@ export const getters = {
     state.version === 'custom'
       ? '**Plugin version: local plugin file**'
       : state.version
-      ? `**@prettier/plugin-php v${state.version}**
+        ? `**@prettier/plugin-php v${state.version}**
 [Playground link](${state.url})`
-      : '**Plugin version: unknown**'
+        : '**Plugin version: unknown**'
   }
 
 **Input:**

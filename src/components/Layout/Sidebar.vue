@@ -224,7 +224,11 @@ export default {
   } */
 
   &__option {
-    font-family: Consolas, Courier New, Courier, monospace;
+    font-family:
+      Consolas,
+      Courier New,
+      Courier,
+      monospace;
     margin: 10px 0;
     display: block;
   }
